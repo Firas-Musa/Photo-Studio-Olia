@@ -55,9 +55,7 @@ class CategoryController extends Controller
      */
     public function show($category)
     {
-        dd($category);
-
-        return view('category')->compact($img[]);
+        return view('category')->compact();
     }
 
     /**

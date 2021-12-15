@@ -23,7 +23,7 @@ function sliderLeft() {
     }
   } else {
     if (left < -80) {
-      left = 0;
+      left = 50;
     }
   }
 

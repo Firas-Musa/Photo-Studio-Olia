@@ -26,20 +26,6 @@
     </head>
  
     <body> 
-        <!-- <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif -->
 
             <div class="wrapper">
            
@@ -137,23 +123,6 @@
             <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
             <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
 	</div>
-	<!-- -----------------------------------    shering    ----------------------------------- -->
-	<!-- <div class="shering">
-    <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
-            <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
-            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-		<script type="text/javascript">(function() {
-		  if (window.pluso)if (typeof window.pluso.start == "function") return;
-		  if (window.ifpluso==undefined) { window.ifpluso = 1;
-		    var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
-		    s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
-		    s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
-		    var h=d[g]('body')[0];
-		    h.appendChild(s);
-		  }})();</script>
-		<div class="pluso" data-background="transparent" data-options="medium,square,line,horizontal,counter,theme=06" data-services="facebook,twitter,google,email,linkedin,print"></div>
-	</div> -->
-	<!-- -----------------------------------    shering    ----------------------------------- -->
 
 	<a name="промене" href=""></a>
 	<div class="Про_мене">
@@ -201,38 +170,14 @@
 	</button>
 	<div id="slider">
 		<div id="polosa">
-
 			<ul class="sll">
+							@foreach ($categories as $category)
 							<li>
 								<div class="slider_item">
-									<a href="{{ url('/category/news') }}" class="sl">Усы</a>
+									<a href="{{ url('/category/news') }}" class="sl">{{ $category['title'] }}</a>
 								</div>
 							</li>
-							<li>
-								<div class="slider_item">
-									<a href="Усі.html" class="sl">Студія</a>
-								</div>
-							</li>
-							<li>
-								<div class="slider_item">
-									<a href="Діти.html" class="sl">Діти</a>
-								</div>
-							</li>
-							<li>
-								<div class="slider_item">
-									<a href="стріт.html" class="sl">Стріт</a>
-								</div>
-							</li>
-							<li>
-								<div class="slider_item">
-									<a href="" class="sl">Дорослі</a>
-								</div>
-							</li>
-							<li>
-								<div class="slider_item">
-									<a href="" class="sl">Пейзажі</a>
-								</div>
-							</li>
+							@endforeach
 						</ul>
 		</div>
 	</div>
@@ -244,23 +189,6 @@
 	
 	<!------------- SLIDER ------------->
 	<a name="фото" href=""></a>
-	<!-- <div class="block_photo">
-		<a href="images/IMG_1.png" data-lightbox="test"><img loading="lazy" src="images/IMG_1.png" alt="no-image"></a>
-		<a href="images/IMG_2.png" data-lightbox="test"><img loading="lazy" src="images/IMG_2.png" alt="no-image"></a>
-		<a href="images/IMG_3.png" data-lightbox="test"><img loading="lazy" src="images/IMG_3.png" alt="no-image"></a>
-		<a href="images/IMG_4.png" data-lightbox="test"><img loading="lazy" src="images/IMG_4.png" alt="no-image"></a>
-		<a href="images/IMG_5.png" data-lightbox="test"><img loading="lazy" src="images/IMG_5.png" alt="no-image"></a>
-		<a href="images/IMG_6.png" data-lightbox="test"><img loading="lazy" src="images/IMG_6.png" alt="no-image"></a>
-		<a href="images/IMG_7.png" data-lightbox="test"><img loading="lazy" src="images/IMG_7.png" alt="no-image"></a>
-		<a href="images/IMG_8.png" data-lightbox="test"><img loading="lazy" src="images/IMG_8.png" alt="no-image"></a>
-		<a href="images/IMG_9.png" data-lightbox="test"><img loading="lazy" src="images/IMG_9.png" alt="no-image"></a>
-		<a href="images/IMG_10.png" data-lightbox="test"><img loading="lazy" src="images/IMG_10.png" alt="no-image"></a>
-		<a href="images/IMG_11.png" data-lightbox="test"><img loading="lazy" src="images/IMG_11.png" alt="no-image"></a>		
-		
-		<button class="кнопка_більше_фото">
-			<a href="Усі_фото.html"><img src="images/Більше фото.png"></a>
-		</button>
-	</div> -->
 
 	<div class="container">
 		<div class="galery_items">
