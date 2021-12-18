@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\HomeControllerWelcome;
 
 /*
@@ -33,6 +34,7 @@ Route::middleware(['role:admin'])->prefix('admin_panel')->group(function () {
     Route::get('/', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('homeAdmin'); // /admin
 
     Route::resource('category', CategoryController::class);
-
+    Route::resource('post', PostController::class);
     });
+
  

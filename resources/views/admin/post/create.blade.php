@@ -32,9 +32,33 @@
                   @csrf
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Назва</label>
+                    <label for="exampleInputEmail1">Название</label>
                     <input type="text" name="title" class="form-control" id="exampleInputEmail1" placeholder="Введіть назву категорії" required>
                   </div>
+                  <div class="form-group">
+                      <div class="form-group">
+                        <labe>Выберите категорию</label>
+                        <select name="cat_id" class="form-control" require>
+                        @foreach ($categories as $category)
+                           <option value="{{ $category['id'] }}">{{ $category['title'] }}</option>
+                          @endforeach
+                        </select>
+                      </div>
+
+                  </div>
+                  
+                  <div class="form-group">
+                    <textarea name="text" class="editor"></textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="feature_image">Feature Image</label>
+                    <img src="" alt="" class="img-uploaded" style="display: block; width: 300px">
+                    <input type="text" class="form-control" id="feature_image" name="feature_image" value="" readonly>
+                    <a href="" class="popup_selector" data-inputid="feature_image">Выбрать картинку</a>
+                  </div>
+
+                  
                 </div>
                 <!-- /.card-body -->
 

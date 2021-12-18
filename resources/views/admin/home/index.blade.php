@@ -88,6 +88,8 @@
         <!-- Main row -->
         
         <!-- /.row (main row) -->
+        <div class="container">
+        
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->

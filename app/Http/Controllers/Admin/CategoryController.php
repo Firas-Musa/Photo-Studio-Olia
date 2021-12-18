@@ -20,6 +20,7 @@ class CategoryController extends Controller
         return view('admin.category.index', [
             'categories' => $categories
         ]);
+        
     }
 
     /**
